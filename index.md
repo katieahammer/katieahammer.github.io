@@ -48,9 +48,9 @@
         within my Entrepreneurship Skills course at NC State, where I learned numerous skills that contribute 
         positively to any business venture.
     </p>
-    <a href="https://github.com/katieahammer/katieahammer.github.io/blob/master/pdf/Competency%20Audit-%20Katie%20Hammer.pdf" target="_blank" style="color: red; text-decoration: none; font-weight: bold;">
-        Competency Audit
-    </a>
+    <a href="https://github.com/katieahammer/katieahammer.github.io/raw/master/pdf/Competency%20Audit-%20Katie%20Hammer.pdf" target="_blank" style="background-color: #FF0000; color: white; padding: 12px 24px; text-align: center; text-decoration: none; display: inline-block; border-radius: 8px; font-weight: bold; font-size: 16px; border: none; cursor: pointer; transition: background-color 0.3s ease;">
+    Competency Audit
+</a>
     
 </div>
 
