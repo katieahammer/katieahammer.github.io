@@ -7,8 +7,12 @@
    {% seo %}
    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
    <style>
+       header {
+           text-align: center; /* Centers everything in the header */
+       }
        header h1 a {
            color: red; /* Red color for title */
+           text-decoration: none; /* Removes underline from the title */
        }
        header img {
            width: 200px; /* Adjusted logo size */
@@ -18,6 +22,7 @@
        }
        p {
            max-width: 90%; /* Makes description boxes larger */
+           margin: 0 auto; /* Centers the paragraph */
        }
    </style>
    <!--[if lt IE 9]>
