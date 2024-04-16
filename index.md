@@ -51,10 +51,26 @@
     <a href="https://github.com/katieahammer/katieahammer.github.io/blob/master/pdf/Competency%20Audit-%20Katie%20Hammer.pdf" target="_blank" style="color: red; text-decoration: none; font-weight: bold;">
         Competency Audit
     </a>
+    
 </div>
 
 
 ---
+<div>
+    <h2>Data Structures Experiment Report</h2>
+    <p>
+        I compiled an experiment report on various data structures (implemented in Java) as part of my Data 
+        Structures and Algorithms course at NC State. Throughout the semester, we explored the efficiency and 
+        runtimes of different data structures, creating a real-world example. We developed a sample program 
+        to sort connections between people, analyzing runtimes based on input size and data structure. 
+        Below are visualizations including a log-log chart comparing all the data structures used, and a normalized log-log 
+        graph showcasing the linear probing hash map, the most efficent data stucture that I then used in my implentation.
+    </p>
+    <div style="display: flex; justify-content: space-around;">
+        <img src="https://github.com/katieahammer/katieahammer.github.io/blob/master/images/loglog.png" alt="Log-Log Chart of Data Structures" style="width: 45%; border-radius: 8px;">
+        <img src="https://github.com/katieahammer/katieahammer.github.io/blob/master/images/loglog2.png" alt="Normalized Log-Log Graph for Linear Probing Hash Map" style="width: 45%; border-radius: 8px;">
+    </div>
+</div>
 
 
 
