@@ -78,12 +78,12 @@
 
 
 ---
-<h1>Academic Projects</h1>
+
 <div>
     <h2>GPS Project in C</h2>
     <p>
 For this exercise in my C and Software Tools course at NC State, I worked with structs to define a new struct type, dynamically allocate an
-array of that type of struct, and fill the array with input from a file to answer a sequence of queries from the user. This project was completed with guidance from the NC State Computer Science teaching staff, utilizing essential C programming skills.
+array of that type of struct, and fill the array with input from a file to answer a sequence of queries from the user about a gps style location. This project was completed with guidance from the NC State Computer Science teaching staff, utilizing essential C programming skills.
     </p>
     <a href="https://github.com/katieahammer/katieahammer.github.io/blob/master/pdf/gps.c" target="_blank" style="background-color: #FF0000; color: white; padding: 12px 24px; text-align: center; text-decoration: none; display: inline-block; border-radius: 8px; font-weight: bold; font-size: 16px; border: none; cursor: pointer; transition: background-color 0.3s ease;">
         GPS Project
