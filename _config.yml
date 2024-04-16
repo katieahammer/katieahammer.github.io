@@ -1,9 +1,4 @@
----
-layout: default
 title: Katie Hammer
----
-
-<h1 style="color: red;">{{ page.title }}</h1>
 logo: "/images/IMG_1256.jpg?raw=true" 
 description: >
   My name is Katie Hammer and I am a rising senior at NC State studying computer science, 
