@@ -9,7 +9,9 @@
     <a href="https://github.com/katieahammer/katieahammer.github.io/blob/master/pdf/Resume-Katherine-Hammer.docx.pdf" target="_blank" style="background-color: #FF0000; color: white; padding: 12px 24px; text-align: center; text-decoration: none; display: inline-block; border-radius: 8px; font-weight: bold; font-size: 16px; border: none; cursor: pointer; transition: background-color 0.3s ease;">
         Resume
     </a>
+    
 </div>
+
 
 ---
 <div>
@@ -18,7 +20,9 @@
     <a href="https://github.com/katieahammer/katieahammer.github.io/blob/master/pdf/Cover%20Letter%20(4)%20(1).pdf" target="_blank" style="background-color: #FF0000; color: white; padding: 12px 24px; text-align: center; text-decoration: none; display: inline-block; border-radius: 8px; font-weight: bold; font-size: 16px; border: none; cursor: pointer; transition: background-color 0.3s ease;">
          Cover Letter
     </a>
+    
 </div>
+
 
 ---
 <h1>Secondary Documents</h1>
@@ -28,18 +32,27 @@
     <a href="https://github.com/katieahammer/katieahammer.github.io/blob/master/pdf/Peer%20Reference.pdf" target="_blank" style="background-color: #FF0000; color: white; padding: 12px 24px; text-align: center; text-decoration: none; display: inline-block; border-radius: 8px; font-weight: bold; font-size: 16px; border: none; cursor: pointer; transition: background-color 0.3s ease;">
         Peer Reference
     </a>
+    
 </div>
 
 
 ---
 
 ### Category Name 2
+<h1>Academic Projects</h1>
+<div>
+    <h2>Competency Audit</h2>
+    <p>
+        I compiled a competency audit full of knowledge, skills, and abilities required for a data scientist role. 
+        This audit includes measures and scales to substantiate these competencies. I completed this project 
+        within my Entrepreneurship Skills course at NC State, where I learned numerous skills that contribute 
+        positively to any business venture.
+    </p>
+    <a href="https://github.com/katieahammer/katieahammer.github.io/raw/master/pdf/Competency%20Audit-%20Katie%20Hammer.pdf" target="_blank" style="color: red; text-decoration: none; font-weight: bold;">
+        View Competency Audit
+    </a>
+</div>
 
-- [Project 1 Title](http://example.com/)
-- [Project 2 Title](http://example.com/)
-- [Project 3 Title](http://example.com/)
-- [Project 4 Title](http://example.com/)
-- [Project 5 Title](http://example.com/)
 
 ---
 
