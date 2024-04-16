@@ -2,7 +2,15 @@
 
 ---
 
-### Category Name 1 
+<h1>Primary Documents</h1>
+<div>
+    <h2>Resume</h2>
+    <p>This is my professional resume, highlighting my skills and experiences.</p>
+    <a href="https://github.com/katieahammer/katieahammer.github.io/raw/master/pdf/Resume-%20Katherine%20Hammer.docx.pdf" target="_blank" style="background-color: #FF0000; color: white; padding: 12px 24px; text-align: center; text-decoration: none; display: inline-block; border-radius: 8px; font-weight: bold; font-size: 16px; border: none; cursor: pointer; transition: background-color 0.3s ease;">
+        Resume
+    </a>
+</div>
+
 
 [Project 1 Title](/sample_page)
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
