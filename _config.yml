@@ -1,12 +1,6 @@
----
-title: Katie Hammer
-remote_theme: pages-themes/minimal@v0.2.0
-plugins:
-  - jekyll-remote-theme
-google_analytics: UA-000000-0
----
 
-<img src="/images/IMG_1256.jpg?raw=true" alt="Katie Hammer Logo" style="width: 100px; height: 100px; border-radius: 50%; display: block; margin: auto;">
+
+<img src="/images/IMG_1256.jpg?raw=true" alt="Katie Hammer Logo" style="width: 100px; height: 100px;">
 
 My name is Katie Hammer and I am a rising senior at NC State studying computer science, 
 with a strong interest in data science. I am looking to grow my experience in the field 
@@ -14,3 +8,11 @@ and share what I have to offer!
 
 <br><br>
 <a href="https://www.linkedin.com/in/kahammer/" style="color: red;">LinkedIn Profile</a>
+
+---
+title: Katie Hammer
+remote_theme: pages-themes/minimal@v0.2.0
+plugins:
+  - jekyll-remote-theme
+google_analytics: UA-000000-0
+---
