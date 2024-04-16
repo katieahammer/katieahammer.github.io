@@ -64,14 +64,16 @@
         runtimes of different data structures, creating a real-world example. We developed a sample program 
         to sort connections between people, analyzing runtimes based on input size and data structure. 
         Below are visualizations including a log-log chart comparing all the data structures used, and a normalized log-log 
-        graph showcasing the linear probing hash map, the most efficent data stucture that I then used in my implentation.
+        graph showcasing the linear probing hash map, the most efficient data structure that I then used in my implementation.
     </p>
     <div style="display: flex; justify-content: space-around;">
         <img src="https://github.com/katieahammer/katieahammer.github.io/raw/master/images/loglog.png" alt="Log-Log Chart of Data Structures" style="width: 45%; border-radius: 8px;">
         <img src="https://github.com/katieahammer/katieahammer.github.io/raw/master/images/loglog2.png" alt="Normalized Log-Log Graph for Linear Probing Hash Map" style="width: 45%; border-radius: 8px;">
     </div>
+    <a href="https://github.com/katieahammer/katieahammer.github.io/raw/master/pdf/Experiment%20Report.pdf" target="_blank" style="background-color: #FF0000; color: white; padding: 12px 24px; text-align: center; text-decoration: none; display: inline-block; border-radius: 8px; font-weight: bold; font-size: 16px; border: none; cursor: pointer; transition: background-color 0.3s ease; margin-top: 10px;">
+        View Full Experiment Report
+    </a>
 </div>
-
 
 
 
