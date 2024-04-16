@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
 <head>
@@ -12,8 +11,11 @@
            color: red; /* Red color for title */
        }
        header img {
-           width: 200px; /* Smaller logo size */
-           border-radius: 25%; /* Circular image */
+           width: 200px; /* Adjusted logo size */
+           border-radius: 25%; /* Slightly rounded image */
+       }
+       p {
+           max-width: 90%; /* Makes description boxes larger */
        }
    </style>
    <!--[if lt IE 9]>
@@ -46,10 +48,7 @@
          {{ content }}
       </section>
       <footer>
-         {% if site.github.is_project_page %}
-         <p>This project is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
-         {% endif %}
-         <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+         <!-- Footer content removed for cleaner appearance -->
       </footer>
    </div>
    <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
