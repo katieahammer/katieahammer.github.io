@@ -11,17 +11,25 @@
     </a>
 </div>
 
-
-[Project 1 Title](/sample_page)
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
+---
+<div>
+    <h2>Cover Letter</h2>
+    <p>This cover letter accompanies my resume and details my qualifications and enthusiasm for the role.</p>
+    <a href="https://github.com/katieahammer/katieahammer.github.io/raw/master/pdf/Cover%20Letter%20(4).pdf" target="_blank" style="background-color: #FF0000; color: white; padding: 12px 24px; text-align: center; text-decoration: none; display: inline-block; border-radius: 8px; font-weight: bold; font-size: 16px; border: none; cursor: pointer; transition: background-color 0.3s ease;">
+         Cover Letter
+    </a>
+</div>
 
 ---
-[Project 2 Title](/pdf/sample_presentation.pdf)
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
+<h1>Secondary Documents</h1>
+<div>
+    <h2>Peer Reference</h2>
+    <p>This peer reference highlights my teamwork skills and professional integrity, as endorsed by my colleagues.</p>
+    <a href="https://github.com/katieahammer/katieahammer.github.io/raw/master/pdf/Peer%20Reference.pdf" target="_blank" style="background-color: #FF0000; color: white; padding: 12px 24px; text-align: center; text-decoration: none; display: inline-block; border-radius: 8px; font-weight: bold; font-size: 16px; border: none; cursor: pointer; transition: background-color 0.3s ease;">
+        Peer Reference
+    </a>
+</div>
 
----
-[Project 3 Title](http://example.com/)
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
 
 ---
 
