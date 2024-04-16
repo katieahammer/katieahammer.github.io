@@ -67,8 +67,8 @@
         graph showcasing the linear probing hash map, the most efficent data stucture that I then used in my implentation.
     </p>
     <div style="display: flex; justify-content: space-around;">
-        <img src="https://github.com/katieahammer/katieahammer.github.io/blob/master/images/loglog.png" alt="Log-Log Chart of Data Structures" style="width: 45%; border-radius: 8px;">
-        <img src="https://github.com/katieahammer/katieahammer.github.io/blob/master/images/loglog2.png" alt="Normalized Log-Log Graph for Linear Probing Hash Map" style="width: 45%; border-radius: 8px;">
+        <img src="https://github.com/katieahammer/katieahammer.github.io/raw/master/images/loglog.png" alt="Log-Log Chart of Data Structures" style="width: 45%; border-radius: 8px;">
+        <img src="https://github.com/katieahammer/katieahammer.github.io/raw/master/images/loglog2.png" alt="Normalized Log-Log Graph for Linear Probing Hash Map" style="width: 45%; border-radius: 8px;">
     </div>
 </div>
 
