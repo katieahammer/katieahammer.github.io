@@ -80,10 +80,17 @@
 ---
 <h1>Research</h1>
 <div>
-    <h2>Summer STEM Research Project 2024</h2>
-    <p>This is my professional resume, highlighting my skills and experiences.</p>
-    <a href="https://github.com/katieahammer/katieahammer.github.io/raw/master/pdf/Resume_Katherine_Hammer.docx.pdf" target="_blank" style="background-color: #FF0000; color: white; padding: 12px 24px; text-align: center; text-decoration: none; display: inline-block; border-radius: 8px; font-weight: bold; font-size: 16px; border: none; cursor: pointer; transition: background-color 0.3s ease;">
-        Resume
+    <h2>Summer STEM Research 2024</h2>
+    <p>
+        I worked at University College Dublin in Ireland during the summer of 2024 with Professor Brett Becker 
+        and one of his PhD students. My project was titled "Exploring the Boundaries of ChatGPT in Scientific Inquiry 
+        Through Prompting."
+    </p>
+    <a href="https://github.com/katieahammer/katieahammer.github.io/raw/master/pdf/Hammer_Poster (1) (1) (1).pdf" target="_blank" style="background-color: #FF0000; color: white; padding: 12px 24px; text-align: center; text-decoration: none; display: inline-block; border-radius: 8px; font-weight: bold; font-size: 16px; border: none; cursor: pointer; transition: background-color 0.3s ease;">
+        Research Poster
+    </a>
+    <a href="https://github.com/katieahammer/katieahammer.github.io/raw/master/pdf/Exploring_the_boundaries_" target="_blank" style="background-color: #FF0000; color: white; padding: 12px 24px; text-align: center; text-decoration: none; display: inline-block; border-radius: 8px; font-weight: bold; font-size: 16px; border: none; cursor: pointer; transition: background-color 0.3s ease; margin-left: 10px;">
+        Research Paper
     </a>
 </div>
 
