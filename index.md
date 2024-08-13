@@ -89,7 +89,7 @@
     <a href="https://github.com/katieahammer/katieahammer.github.io/raw/master/pdf/Hammer_Poster (1) (1) (1).pdf" target="_blank" style="background-color: #FF0000; color: white; padding: 12px 24px; text-align: center; text-decoration: none; display: inline-block; border-radius: 8px; font-weight: bold; font-size: 16px; border: none; cursor: pointer; transition: background-color 0.3s ease;">
         Research Poster
     </a>
-    <a href="https://github.com/katieahammer/katieahammer.github.io/raw/master/pdf/Exploring_the_boundaries_" target="_blank" style="background-color: #FF0000; color: white; padding: 12px 24px; text-align: center; text-decoration: none; display: inline-block; border-radius: 8px; font-weight: bold; font-size: 16px; border: none; cursor: pointer; transition: background-color 0.3s ease; margin-left: 10px;">
+    <a href="https://github.com/katieahammer/katieahammer.github.io/raw/master/pdf/Exploring_the_Boundaries_of_ChatGPT_in_Scientific_Inquiry_Through_Prompting (3) (1) (1).pdf" target="_blank" style="background-color: #FF0000; color: white; padding: 12px 24px; text-align: center; text-decoration: none; display: inline-block; border-radius: 8px; font-weight: bold; font-size: 16px; border: none; cursor: pointer; transition: background-color 0.3s ease; margin-left: 10px;">
         Research Paper
     </a>
 </div>
