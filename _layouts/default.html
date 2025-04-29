@@ -1,130 +1,200 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
 <head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-   {% seo %}
-   <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
-   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-   <style>
-       :root {
-           --primary-color: #ec4899;  /* Pink-500 */
-           --text-color: #1f2937;
-           --background-color: #ffffff;
-           --secondary-color: #6b7280;
-           --accent-color: #db2777;  /* Pink-600 */
-       }
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% seo %}
+    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #ec4899;
+            --text-color: #1f2937;
+            --background-color: #ffffff;
+            --secondary-color: #6b7280;
+            --accent-color: #db2777;
+            --section-bg: #f9fafb;
+        }
 
-       body {
-           font-family: 'Inter', sans-serif;
-           color: var(--text-color);
-           line-height: 1.6;
-           background-color: var(--background-color);
-           margin: 0;
-           padding: 0;
-       }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-       .wrapper {
-           max-width: 1200px;
-           margin: 0 auto;
-           padding: 2rem;
-       }
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-color);
+            line-height: 1.6;
+            background-color: var(--background-color);
+        }
 
-       header {
-           text-align: center;
-           padding: 3rem 0;
-           margin-bottom: 2rem;
-       }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
 
-       header h1 a {
-           color: var(--primary-color);
-           text-decoration: none;
-           font-size: 2.5rem;
-           font-weight: 700;
-           transition: color 0.3s ease;
-       }
+        header {
+            padding: 4rem 0;
+            text-align: center;
+            background-color: var(--section-bg);
+        }
 
-       header h1 a:hover {
-           color: var(--accent-color);
-       }
+        .profile-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+        }
 
-       header img {
-           width: 200px;
-           height: 200px;
-           border-radius: 50%;
-           object-fit: cover;
-           margin: 2rem auto;
-           box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-           transition: transform 0.3s ease;
-       }
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
 
-       header img:hover {
-           transform: scale(1.05);
-       }
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
 
-       p {
-           max-width: 800px;
-           margin: 1rem auto;
-           font-size: 1.1rem;
-           color: var(--secondary-color);
-       }
+        .subtitle {
+            font-size: 1.25rem;
+            color: var(--secondary-color);
+            max-width: 600px;
+            margin: 0 auto;
+        }
 
-       section {
-           padding: 2rem 0;
-       }
+        .contact-info {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 1rem;
+        }
 
-       a {
-           color: var(--primary-color);
-           text-decoration: none;
-           transition: color 0.3s ease;
-       }
+        .contact-info a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
 
-       a:hover {
-           color: var(--accent-color);
-       }
+        .contact-info a:hover {
+            color: var(--accent-color);
+        }
 
-       @media (max-width: 768px) {
-           .wrapper {
-               padding: 1rem;
-           }
+        main {
+            padding: 4rem 0;
+        }
 
-           header {
-               padding: 2rem 0;
-           }
+        section {
+            margin-bottom: 4rem;
+        }
 
-           header h1 a {
-               font-size: 2rem;
-           }
+        section:last-child {
+            margin-bottom: 0;
+        }
 
-           header img {
-               width: 150px;
-               height: 150px;
-           }
-       }
-   </style>
-   <!--[if lt IE 9]>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-   <![endif]-->
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: var(--primary-color);
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: var(--section-bg);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-color);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            background-color: var(--section-bg);
+            color: var(--secondary-color);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1rem;
+            }
+
+            header {
+                padding: 2rem 0;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .profile-image {
+                width: 150px;
+                height: 150px;
+            }
+        }
+    </style>
 </head>
 <body>
-   <div class="wrapper">
-      <header>
-         <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
-         {% if site.logo %}
-         <img src="{{site.logo | relative_url}}" alt="Profile Picture" />
-         {% endif %}
-         <p>{{ site.description | default: site.github.project_tagline }}</p>
-      </header>
-      <section>
-         {{ content }}
-      </section>
-      <footer>
-         <p style="text-align: center; color: var(--secondary-color); font-size: 0.9rem;">
-            © {{ site.time | date: '%Y' }} {{ site.title }}
-         </p>
-      </footer>
-   </div>
-   <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
+    <header>
+        <div class="container">
+            <div class="profile-section">
+                {% if site.logo %}
+                <img src="{{site.logo | relative_url}}" alt="Profile Picture" class="profile-image" />
+                {% endif %}
+                <h1>{{ site.title | default: site.github.repository_name }}</h1>
+                <p class="subtitle">{{ site.description | default: site.github.project_tagline }}</p>
+                <div class="contact-info">
+                    <a href="https://www.linkedin.com/in/katieahammer/">LinkedIn</a>
+                    <a href="mailto:your-email@example.com">Email</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section>
+            <h2>About Me</h2>
+            <div class="content-grid">
+                <div class="card">
+                    <h3>Education</h3>
+                    <p>Senior at NC State University studying Computer Science with a focus on Data Science.</p>
+                </div>
+                <div class="card">
+                    <h3>Skills</h3>
+                    <p>Programming, Data Analysis, Problem Solving</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Projects</h2>
+            <div class="content-grid">
+                {{ content }}
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© {{ site.time | date: '%Y' }} {{ site.title }}</p>
+        </div>
+    </footer>
 </body>
 </html>
