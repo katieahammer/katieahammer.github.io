@@ -6,23 +6,101 @@
    <meta name="viewport" content="width=device-width, initial-scale=1">
    {% seo %}
    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
+   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
    <style>
+       :root {
+           --primary-color: #ec4899;  /* Pink-500 */
+           --text-color: #1f2937;
+           --background-color: #ffffff;
+           --secondary-color: #6b7280;
+           --accent-color: #db2777;  /* Pink-600 */
+       }
+
+       body {
+           font-family: 'Inter', sans-serif;
+           color: var(--text-color);
+           line-height: 1.6;
+           background-color: var(--background-color);
+           margin: 0;
+           padding: 0;
+       }
+
+       .wrapper {
+           max-width: 1200px;
+           margin: 0 auto;
+           padding: 2rem;
+       }
+
        header {
-           text-align: center; /* Centers everything in the header */
+           text-align: center;
+           padding: 3rem 0;
+           margin-bottom: 2rem;
        }
+
        header h1 a {
-           color: red; /* Red color for title */
-           text-decoration: none; /* Removes underline from the title */
+           color: var(--primary-color);
+           text-decoration: none;
+           font-size: 2.5rem;
+           font-weight: 700;
+           transition: color 0.3s ease;
        }
+
+       header h1 a:hover {
+           color: var(--accent-color);
+       }
+
        header img {
-           width: 200px; /* Adjusted logo size */
-           border-radius: 50%; /* Perfect circle */
-           display: block;
-           margin: 0 auto; /* Centers the image horizontally */
+           width: 200px;
+           height: 200px;
+           border-radius: 50%;
+           object-fit: cover;
+           margin: 2rem auto;
+           box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+           transition: transform 0.3s ease;
        }
+
+       header img:hover {
+           transform: scale(1.05);
+       }
+
        p {
-           max-width: 90%; /* Makes description boxes larger */
-           margin: 0 auto; /* Centers the paragraph */
+           max-width: 800px;
+           margin: 1rem auto;
+           font-size: 1.1rem;
+           color: var(--secondary-color);
+       }
+
+       section {
+           padding: 2rem 0;
+       }
+
+       a {
+           color: var(--primary-color);
+           text-decoration: none;
+           transition: color 0.3s ease;
+       }
+
+       a:hover {
+           color: var(--accent-color);
+       }
+
+       @media (max-width: 768px) {
+           .wrapper {
+               padding: 1rem;
+           }
+
+           header {
+               padding: 2rem 0;
+           }
+
+           header h1 a {
+               font-size: 2rem;
+           }
+
+           header img {
+               width: 150px;
+               height: 150px;
+           }
        }
    </style>
    <!--[if lt IE 9]>
@@ -34,7 +112,7 @@
       <header>
          <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
          {% if site.logo %}
-         <img src="{{site.logo | relative_url}}" alt="Logo" />
+         <img src="{{site.logo | relative_url}}" alt="Profile Picture" />
          {% endif %}
          <p>{{ site.description | default: site.github.project_tagline }}</p>
       </header>
@@ -42,7 +120,9 @@
          {{ content }}
       </section>
       <footer>
-         <!-- Footer content removed for cleaner appearance -->
+         <p style="text-align: center; color: var(--secondary-color); font-size: 0.9rem;">
+            © {{ site.time | date: '%Y' }} {{ site.title }}
+         </p>
       </footer>
    </div>
    <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
