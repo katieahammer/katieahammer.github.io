@@ -198,6 +198,222 @@
             margin-bottom: 1rem;
         }
 
+        /* Portfolio Title */
+        .portfolio-title {
+            font-size: 3rem;
+            color: var(--primary-pink);
+            text-align: center;
+            margin-bottom: 3rem;
+            font-weight: 700;
+        }
+
+        /* Resume and Timeline Section */
+        .resume-timeline-section {
+            margin-bottom: 4rem;
+        }
+
+        .resume-timeline-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .resume-card, .timeline-card {
+            background: var(--light-pink);
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(236, 72, 153, 0.1);
+        }
+
+        .download-button {
+            display: inline-block;
+            background: var(--primary-pink);
+            color: white;
+            text-decoration: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        .download-button:hover {
+            background: var(--dark-pink);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(236, 72, 153, 0.3);
+        }
+
+        /* Timeline Styles */
+        .timeline {
+            position: relative;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--primary-pink);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -5px;
+            top: 0.5rem;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--primary-pink);
+        }
+
+        .timeline-date {
+            font-weight: 600;
+            color: var(--primary-pink);
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-content h3 {
+            color: var(--text-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-content p {
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Publication Section */
+        .publication-section {
+            margin-bottom: 4rem;
+        }
+
+        .publication-card {
+            background: var(--light-pink);
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(236, 72, 153, 0.1);
+            position: relative;
+        }
+
+        .publication-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: var(--primary-pink);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .publication-authors {
+            color: var(--secondary-color);
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+
+        .publication-abstract {
+            margin-bottom: 1.5rem;
+        }
+
+        .publication-link {
+            color: var(--primary-pink);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .publication-link:hover {
+            color: var(--dark-pink);
+        }
+
+        /* Projects Section */
+        .projects-section {
+            margin-bottom: 4rem;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: var(--light-pink);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(236, 72, 153, 0.1);
+        }
+
+        .project-description {
+            margin-bottom: 1.5rem;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tag {
+            background: var(--primary-pink);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        /* Work Samples Section */
+        .work-samples-section {
+            margin-bottom: 4rem;
+        }
+
+        .work-samples-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .work-sample-card {
+            background: var(--light-pink);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(236, 72, 153, 0.1);
+        }
+
+        .work-description {
+            margin-bottom: 1.5rem;
+        }
+
+        .work-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .work-link {
+            color: var(--primary-pink);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .work-link:hover {
+            color: var(--dark-pink);
+        }
+
         @media (max-width: 768px) {
             .business-card {
                 padding: 1rem;
@@ -221,6 +437,20 @@
 
             .contact-item {
                 justify-content: center;
+            }
+
+            .portfolio-title {
+                font-size: 2rem;
+            }
+
+            .resume-timeline-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .projects-grid,
+            .work-samples-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -255,24 +485,101 @@
 
     <div class="content-section">
         <div class="container">
-            <section>
-                <h2>About Me</h2>
-                <div class="content-grid">
-                    <div class="content-card">
-                        <h3>Education</h3>
-                        <p>Recent graduate from NC State University with a degree in Computer Science.</p>
+            <h1 class="portfolio-title">Professional Portfolio</h1>
+            
+            <!-- Resume and Timeline Section -->
+            <section class="resume-timeline-section">
+                <div class="resume-timeline-grid">
+                    <div class="resume-card">
+                        <h2>Resume</h2>
+                        <p>Download my complete resume to learn more about my qualifications and experience.</p>
+                        <a href="/pdf/resume.pdf" class="download-button" target="_blank">
+                            📄 Download Resume
+                        </a>
                     </div>
-                    <div class="content-card">
-                        <h3>Skills</h3>
-                        <p>Programming, Data Analysis, Problem Solving, Machine Learning</p>
+                    <div class="timeline-card">
+                        <h2>Professional Experience</h2>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-date">2023 - Present</div>
+                                <div class="timeline-content">
+                                    <h3>Job Title</h3>
+                                    <p>Company Name</p>
+                                    <p>Brief description of role and responsibilities...</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-date">2022 - 2023</div>
+                                <div class="timeline-content">
+                                    <h3>Previous Position</h3>
+                                    <p>Previous Company</p>
+                                    <p>Description of previous role and achievements...</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <section style="margin-top: 4rem;">
-                <h2>Projects & Experience</h2>
-                <div class="content-grid">
-                    {{ content }}
+            <!-- Research Publication Section -->
+            <section class="publication-section">
+                <h2>Research & Publications</h2>
+                <div class="publication-card">
+                    <div class="publication-badge">📚 Published Paper</div>
+                    <h3>Paper Title</h3>
+                    <p class="publication-authors">Authors: Katie Hammer, et al.</p>
+                    <p class="publication-abstract">Abstract or brief description of the research paper and its significance...</p>
+                    <a href="#" class="publication-link">Read Full Paper →</a>
+                </div>
+            </section>
+
+            <!-- Academic Projects Section -->
+            <section class="projects-section">
+                <h2>Academic Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <h3>Project Name 1</h3>
+                        <p class="project-description">Description of the academic project, technologies used, and outcomes achieved.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Machine Learning</span>
+                            <span class="tag">Data Analysis</span>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <h3>Project Name 2</h3>
+                        <p class="project-description">Another academic project showcasing different skills and technologies.</p>
+                        <div class="project-tags">
+                            <span class="tag">Java</span>
+                            <span class="tag">Web Development</span>
+                            <span class="tag">Database</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Work Samples Section -->
+            <section class="work-samples-section">
+                <h2>Work Samples</h2>
+                <div class="work-samples-grid">
+                    <div class="work-sample-card">
+                        <h3>Sample Work 1</h3>
+                        <p class="work-description">Description of work sample, problem solved, and results achieved.</p>
+                        <div class="work-tags">
+                            <span class="tag">Data Science</span>
+                            <span class="tag">Analytics</span>
+                        </div>
+                        <a href="#" class="work-link">View Details →</a>
+                    </div>
+                    <div class="work-sample-card">
+                        <h3>Sample Work 2</h3>
+                        <p class="work-description">Another work sample demonstrating different skills and expertise.</p>
+                        <div class="work-tags">
+                            <span class="tag">Product Management</span>
+                            <span class="tag">Strategy</span>
+                        </div>
+                        <a href="#" class="work-link">View Details →</a>
+                    </div>
                 </div>
             </section>
         </div>
