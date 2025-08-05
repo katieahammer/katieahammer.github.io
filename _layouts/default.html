@@ -166,63 +166,127 @@
         .content-section {
             background: white;
             padding: 4rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Dynamic Bubble Background */
+        .bubble-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        .bubble {
+            position: absolute;
+            background: var(--light-pink);
+            border-radius: 50%;
+            opacity: 0.3;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .bubble:nth-child(1) {
+            width: 80px;
+            height: 80px;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .bubble:nth-child(2) {
+            width: 120px;
+            height: 120px;
+            left: 20%;
+            animation-delay: 2s;
+        }
+
+        .bubble:nth-child(3) {
+            width: 60px;
+            height: 60px;
+            left: 70%;
+            animation-delay: 4s;
+        }
+
+        .bubble:nth-child(4) {
+            width: 100px;
+            height: 100px;
+            left: 80%;
+            animation-delay: 1s;
+        }
+
+        .bubble:nth-child(5) {
+            width: 90px;
+            height: 90px;
+            left: 40%;
+            animation-delay: 3s;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+            33% {
+                transform: translateY(-20px) rotate(120deg);
+            }
+            66% {
+                transform: translateY(-10px) rotate(240deg);
+            }
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
-        }
-
-        h2 {
-            font-size: 2rem;
-            color: var(--primary-pink);
-            margin-bottom: 2rem;
-            text-align: center;
-        }
-
-        .content-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .content-card {
-            background: var(--light-pink);
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(236, 72, 153, 0.1);
-        }
-
-        .content-card h3 {
-            color: var(--primary-pink);
-            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
         }
 
         /* Portfolio Title */
         .portfolio-title {
-            font-size: 3rem;
+            font-size: 3.5rem;
             color: var(--primary-pink);
             text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: 4rem;
             font-weight: 700;
+            position: relative;
         }
 
-        /* Resume and Timeline Section */
-        .resume-timeline-section {
+        .portfolio-title::after {
+            content: '';
+            position: absolute;
+            bottom: -1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-pink), var(--secondary-pink));
+            border-radius: 2px;
+        }
+
+        /* Main Content Grid */
+        .main-content-grid {
+            display: grid;
+            grid-template-columns: 350px 1fr;
+            gap: 3rem;
             margin-bottom: 4rem;
         }
 
-        .resume-timeline-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-        }
-
-        .resume-card, .timeline-card {
+        /* Resume Section */
+        .resume-section {
             background: var(--light-pink);
             padding: 2.5rem;
             border-radius: 15px;
             box-shadow: 0 4px 15px rgba(236, 72, 153, 0.1);
+            height: fit-content;
+        }
+
+        .resume-section h2 {
+            font-size: 1.8rem;
+            color: var(--primary-pink);
+            margin-bottom: 1.5rem;
+            text-align: left;
         }
 
         .download-button {
@@ -230,11 +294,13 @@
             background: var(--primary-pink);
             color: white;
             text-decoration: none;
-            padding: 0.8rem 1.5rem;
+            padding: 1rem 2rem;
             border-radius: 25px;
             font-weight: 500;
             transition: all 0.3s ease;
             margin-top: 1rem;
+            text-align: center;
+            width: 100%;
         }
 
         .download-button:hover {
@@ -243,62 +309,80 @@
             box-shadow: 0 4px 12px rgba(236, 72, 153, 0.3);
         }
 
-        /* Timeline Styles */
-        .timeline {
-            position: relative;
+        /* Timeline Section */
+        .timeline-section {
+            background: var(--light-pink);
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(236, 72, 153, 0.1);
         }
 
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background: var(--primary-pink);
+        .timeline-section h2 {
+            font-size: 1.8rem;
+            color: var(--primary-pink);
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+
+        /* Horizontal Timeline */
+        .horizontal-timeline {
+            display: flex;
+            gap: 2rem;
+            overflow-x: auto;
+            padding-bottom: 1rem;
         }
 
         .timeline-item {
-            position: relative;
-            padding-left: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -5px;
-            top: 0.5rem;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: var(--primary-pink);
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            min-width: 250px;
+            box-shadow: 0 2px 8px rgba(236, 72, 153, 0.1);
+            border-left: 4px solid var(--primary-pink);
         }
 
         .timeline-date {
             font-weight: 600;
             color: var(--primary-pink);
             margin-bottom: 0.5rem;
+            font-size: 0.9rem;
         }
 
         .timeline-content h3 {
             color: var(--text-color);
             margin-bottom: 0.5rem;
+            font-size: 1.1rem;
         }
 
         .timeline-content p {
             color: var(--secondary-color);
             margin-bottom: 0.5rem;
+            font-size: 0.9rem;
         }
 
-        /* Publication Section */
-        .publication-section {
-            margin-bottom: 4rem;
+        /* Bottom Sections */
+        .bottom-sections {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .publication-section,
+        .projects-section {
+            margin-bottom: 0;
+        }
+
+        .publication-section h2,
+        .projects-section h2 {
+            font-size: 1.8rem;
+            color: var(--primary-pink);
+            margin-bottom: 2rem;
+            text-align: left;
         }
 
         .publication-card {
             background: var(--light-pink);
-            padding: 2.5rem;
+            padding: 2rem;
             border-radius: 15px;
             box-shadow: 0 4px 15px rgba(236, 72, 153, 0.1);
             position: relative;
@@ -337,26 +421,28 @@
             color: var(--dark-pink);
         }
 
-        /* Projects Section */
-        .projects-section {
-            margin-bottom: 4rem;
-        }
-
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
         }
 
         .project-card {
             background: var(--light-pink);
-            padding: 2rem;
+            padding: 1.5rem;
             border-radius: 15px;
             box-shadow: 0 4px 15px rgba(236, 72, 153, 0.1);
         }
 
+        .project-card h3 {
+            color: var(--primary-pink);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
         .project-description {
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
         }
 
         .project-tags {
@@ -440,17 +526,26 @@
             }
 
             .portfolio-title {
-                font-size: 2rem;
+                font-size: 2.5rem;
             }
 
-            .resume-timeline-grid {
+            .main-content-grid {
                 grid-template-columns: 1fr;
                 gap: 2rem;
             }
 
-            .projects-grid,
-            .work-samples-grid {
+            .bottom-sections {
                 grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .horizontal-timeline {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .timeline-item {
+                min-width: auto;
             }
         }
     </style>
@@ -484,104 +579,93 @@
     </div>
 
     <div class="content-section">
+        <div class="bubble-bg">
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+        </div>
         <div class="container">
             <h1 class="portfolio-title">Professional Portfolio</h1>
             
-            <!-- Resume and Timeline Section -->
-            <section class="resume-timeline-section">
-                <div class="resume-timeline-grid">
-                    <div class="resume-card">
-                        <h2>Resume</h2>
-                        <p>Download my complete resume to learn more about my qualifications and experience.</p>
-                        <a href="/pdf/resume.pdf" class="download-button" target="_blank">
-                            📄 Download Resume
-                        </a>
-                    </div>
-                    <div class="timeline-card">
-                        <h2>Professional Experience</h2>
-                        <div class="timeline">
-                            <div class="timeline-item">
-                                <div class="timeline-date">2023 - Present</div>
-                                <div class="timeline-content">
-                                    <h3>Job Title</h3>
-                                    <p>Company Name</p>
-                                    <p>Brief description of role and responsibilities...</p>
-                                </div>
-                            </div>
-                            <div class="timeline-item">
-                                <div class="timeline-date">2022 - 2023</div>
-                                <div class="timeline-content">
-                                    <h3>Previous Position</h3>
-                                    <p>Previous Company</p>
-                                    <p>Description of previous role and achievements...</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+                         <!-- Main Content: Resume and Timeline -->
+             <div class="main-content-grid">
+                 <div class="resume-section">
+                     <h2>Resume</h2>
+                     <p>Download my complete resume to learn more about my qualifications and experience.</p>
+                     <a href="/pdf/resume.pdf" class="download-button" target="_blank">
+                         📄 Download Resume
+                     </a>
+                 </div>
+                 <div class="timeline-section">
+                     <h2>Professional Experience</h2>
+                     <div class="horizontal-timeline">
+                         <div class="timeline-item">
+                             <div class="timeline-date">2023 - Present</div>
+                             <div class="timeline-content">
+                                 <h3>Job Title</h3>
+                                 <p>Company Name</p>
+                                 <p>Brief description of role and responsibilities...</p>
+                             </div>
+                         </div>
+                         <div class="timeline-item">
+                             <div class="timeline-date">2022 - 2023</div>
+                             <div class="timeline-content">
+                                 <h3>Previous Position</h3>
+                                 <p>Previous Company</p>
+                                 <p>Description of previous role and achievements...</p>
+                             </div>
+                         </div>
+                         <div class="timeline-item">
+                             <div class="timeline-date">2021 - 2022</div>
+                             <div class="timeline-content">
+                                 <h3>Internship</h3>
+                                 <p>Internship Company</p>
+                                 <p>Description of internship experience and skills gained...</p>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
 
-            <!-- Research Publication Section -->
-            <section class="publication-section">
-                <h2>Research & Publications</h2>
-                <div class="publication-card">
-                    <div class="publication-badge">📚 Published Paper</div>
-                    <h3>Paper Title</h3>
-                    <p class="publication-authors">Authors: Katie Hammer, et al.</p>
-                    <p class="publication-abstract">Abstract or brief description of the research paper and its significance...</p>
-                    <a href="#" class="publication-link">Read Full Paper →</a>
-                </div>
-            </section>
+             <!-- Bottom Sections: Publications and Projects -->
+             <div class="bottom-sections">
+                 <section class="publication-section">
+                     <h2>Research & Publications</h2>
+                     <div class="publication-card">
+                         <div class="publication-badge">📚 Published Paper</div>
+                         <h3>Paper Title</h3>
+                         <p class="publication-authors">Authors: Katie Hammer, et al.</p>
+                         <p class="publication-abstract">Abstract or brief description of the research paper and its significance...</p>
+                         <a href="#" class="publication-link">Read Full Paper →</a>
+                     </div>
+                 </section>
 
-            <!-- Academic Projects Section -->
-            <section class="projects-section">
-                <h2>Academic Projects</h2>
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <h3>Project Name 1</h3>
-                        <p class="project-description">Description of the academic project, technologies used, and outcomes achieved.</p>
-                        <div class="project-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">Machine Learning</span>
-                            <span class="tag">Data Analysis</span>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <h3>Project Name 2</h3>
-                        <p class="project-description">Another academic project showcasing different skills and technologies.</p>
-                        <div class="project-tags">
-                            <span class="tag">Java</span>
-                            <span class="tag">Web Development</span>
-                            <span class="tag">Database</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Work Samples Section -->
-            <section class="work-samples-section">
-                <h2>Work Samples</h2>
-                <div class="work-samples-grid">
-                    <div class="work-sample-card">
-                        <h3>Sample Work 1</h3>
-                        <p class="work-description">Description of work sample, problem solved, and results achieved.</p>
-                        <div class="work-tags">
-                            <span class="tag">Data Science</span>
-                            <span class="tag">Analytics</span>
-                        </div>
-                        <a href="#" class="work-link">View Details →</a>
-                    </div>
-                    <div class="work-sample-card">
-                        <h3>Sample Work 2</h3>
-                        <p class="work-description">Another work sample demonstrating different skills and expertise.</p>
-                        <div class="work-tags">
-                            <span class="tag">Product Management</span>
-                            <span class="tag">Strategy</span>
-                        </div>
-                        <a href="#" class="work-link">View Details →</a>
-                    </div>
-                </div>
-            </section>
+                 <section class="projects-section">
+                     <h2>Academic Projects</h2>
+                     <div class="projects-grid">
+                         <div class="project-card">
+                             <h3>Project Name 1</h3>
+                             <p class="project-description">Description of the academic project, technologies used, and outcomes achieved.</p>
+                             <div class="project-tags">
+                                 <span class="tag">Python</span>
+                                 <span class="tag">Machine Learning</span>
+                                 <span class="tag">Data Analysis</span>
+                             </div>
+                         </div>
+                         <div class="project-card">
+                             <h3>Project Name 2</h3>
+                             <p class="project-description">Another academic project showcasing different skills and technologies.</p>
+                             <div class="project-tags">
+                                 <span class="tag">Java</span>
+                                 <span class="tag">Web Development</span>
+                                 <span class="tag">Database</span>
+                             </div>
+                         </div>
+                     </div>
+                 </section>
+             </div>
         </div>
     </div>
 </body>
