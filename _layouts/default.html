@@ -43,11 +43,13 @@
 
         .card {
             background: white;
-            border-radius: 20px;
-            padding: 3rem;
-            text-align: center;
+            border-radius: 15px;
+            padding: 2.5rem;
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
             box-shadow: var(--card-shadow);
-            max-width: 500px;
+            max-width: 700px;
             width: 100%;
             position: relative;
             overflow: hidden;
@@ -64,66 +66,89 @@
         }
 
         .profile-image {
-            width: 150px;
-            height: 150px;
+            width: 120px;
+            height: 120px;
             border-radius: 50%;
             object-fit: cover;
-            margin: 0 auto 2rem;
-            border: 4px solid var(--light-pink);
+            border: 3px solid var(--light-pink);
             box-shadow: 0 4px 15px rgba(236, 72, 153, 0.2);
+            flex-shrink: 0;
+        }
+
+        .card-content {
+            flex: 1;
         }
 
         h1 {
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             font-weight: 700;
             color: var(--primary-pink);
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
         }
 
         .title {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             color: var(--secondary-pink);
             font-weight: 500;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
         }
 
         .bio {
             color: var(--text-color);
-            margin-bottom: 2rem;
-            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
         }
 
-        .contact-links {
+        .contact-info {
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-item {
             display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
         }
 
-        .contact-links a {
-            color: var(--primary-pink);
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-            border: 2px solid var(--primary-pink);
-            border-radius: 25px;
-            transition: all 0.3s ease;
+        .contact-label {
             font-weight: 500;
+            color: var(--primary-pink);
+            min-width: 60px;
         }
 
-        .contact-links a:hover {
+        .contact-value {
+            color: var(--text-color);
+        }
+
+        .linkedin-button {
+            display: inline-block;
             background: var(--primary-pink);
             color: white;
+            text-decoration: none;
+            padding: 0.6rem 1.2rem;
+            border-radius: 25px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .linkedin-button:hover {
+            background: var(--dark-pink);
             transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(236, 72, 153, 0.3);
         }
 
         .scroll-indicator {
             position: absolute;
-            bottom: 2rem;
+            bottom: 1rem;
             left: 50%;
             transform: translateX(-50%);
             color: var(--primary-pink);
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             animation: bounce 2s infinite;
+            z-index: 10;
         }
 
         @keyframes bounce {
@@ -131,10 +156,10 @@
                 transform: translateX(-50%) translateY(0);
             }
             40% {
-                transform: translateX(-50%) translateY(-10px);
+                transform: translateX(-50%) translateY(-8px);
             }
             60% {
-                transform: translateX(-50%) translateY(-5px);
+                transform: translateX(-50%) translateY(-4px);
             }
         }
 
@@ -179,16 +204,23 @@
             }
 
             .card {
+                flex-direction: column;
+                text-align: center;
                 padding: 2rem;
+                gap: 1.5rem;
             }
 
             h1 {
-                font-size: 2rem;
+                font-size: 1.8rem;
             }
 
             .profile-image {
-                width: 120px;
-                height: 120px;
+                width: 100px;
+                height: 100px;
+            }
+
+            .contact-item {
+                justify-content: center;
             }
         }
     </style>
@@ -199,12 +231,21 @@
             {% if site.logo %}
             <img src="{{site.logo | relative_url}}" alt="Profile Picture" class="profile-image" />
             {% endif %}
-            <h1>{{ site.title | default: site.github.repository_name }}</h1>
-            <p class="title">Computer Science Student | Data Science Enthusiast</p>
-            <p class="bio">{{ site.description | default: site.github.project_tagline }}</p>
-            <div class="contact-links">
-                <a href="https://www.linkedin.com/in/katieahammer/">LinkedIn</a>
-                <a href="mailto:your-email@example.com">Email</a>
+            <div class="card-content">
+                <h1>{{ site.title | default: site.github.repository_name }}</h1>
+                <p class="title">Computer Scientist</p>
+                <p class="bio">My name is Katie Hammer and I'm a recent Computer Science graduate from NC State. I'm seeking an entry-level role in tech, with interests in data science, systems analytics, product management, and adjacent fields where I can grow and make an impact.</p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="contact-label">Email:</span>
+                        <span class="contact-value">katieahammer@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">Phone:</span>
+                        <span class="contact-value">919-450-7232</span>
+                    </div>
+                </div>
+                <a href="https://www.linkedin.com/in/katieahammer/" class="linkedin-button">LinkedIn Profile</a>
             </div>
             <div class="scroll-indicator">
                 ↓ Scroll for more ↓
@@ -219,7 +260,7 @@
                 <div class="content-grid">
                     <div class="content-card">
                         <h3>Education</h3>
-                        <p>Senior at NC State University studying Computer Science with a focus on Data Science.</p>
+                        <p>Recent graduate from NC State University with a degree in Computer Science.</p>
                     </div>
                     <div class="content-card">
                         <h3>Skills</h3>
