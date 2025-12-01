@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    {% seo %}
-    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Katie Hammer ❤️</title>
+   {% seo %}
+   <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
+   <style>
         :root {
             --primary-pink: #ec4899;
             --secondary-pink: #f472b6;
@@ -48,88 +49,121 @@
 
         .global-bubble {
             position: absolute;
-            background: var(--light-pink);
+            background: linear-gradient(135deg, var(--primary-pink), var(--secondary-pink));
             border-radius: 50%;
-            opacity: 0.2;
-            animation: globalFloat 12s ease-in-out infinite;
+            opacity: 0.15;
+            animation: globalFloat 15s ease-in-out infinite;
+            filter: blur(1px);
         }
 
         .global-bubble:nth-child(1) {
-            width: 80px;
-            height: 80px;
+            width: 100px;
+            height: 100px;
             left: 5%;
             top: 10%;
             animation-delay: 0s;
         }
 
         .global-bubble:nth-child(2) {
-            width: 120px;
-            height: 120px;
+            width: 150px;
+            height: 150px;
             left: 15%;
             top: 30%;
             animation-delay: 2s;
         }
 
         .global-bubble:nth-child(3) {
-            width: 100px;
-            height: 100px;
+            width: 120px;
+            height: 120px;
             left: 80%;
             top: 20%;
             animation-delay: 4s;
         }
 
         .global-bubble:nth-child(4) {
-            width: 140px;
-            height: 140px;
+            width: 180px;
+            height: 180px;
             left: 70%;
             top: 60%;
             animation-delay: 1s;
         }
 
         .global-bubble:nth-child(5) {
-            width: 110px;
-            height: 110px;
+            width: 130px;
+            height: 130px;
             left: 10%;
             top: 70%;
             animation-delay: 3s;
         }
 
         .global-bubble:nth-child(6) {
-            width: 90px;
-            height: 90px;
+            width: 110px;
+            height: 110px;
             left: 85%;
             top: 80%;
             animation-delay: 5s;
         }
 
         .global-bubble:nth-child(7) {
-            width: 130px;
-            height: 130px;
+            width: 160px;
+            height: 160px;
             left: 50%;
             top: 15%;
             animation-delay: 6s;
         }
 
         .global-bubble:nth-child(8) {
-            width: 70px;
-            height: 70px;
+            width: 90px;
+            height: 90px;
             left: 25%;
             top: 85%;
             animation-delay: 7s;
         }
 
+        .global-bubble:nth-child(9) {
+            width: 140px;
+            height: 140px;
+            left: 60%;
+            top: 5%;
+            animation-delay: 8s;
+        }
+
+        .global-bubble:nth-child(10) {
+            width: 100px;
+            height: 100px;
+            left: 40%;
+            top: 50%;
+            animation-delay: 9s;
+        }
+
+        .global-bubble:nth-child(11) {
+            width: 170px;
+            height: 170px;
+            left: 90%;
+            top: 40%;
+            animation-delay: 10s;
+        }
+
+        .global-bubble:nth-child(12) {
+            width: 95px;
+            height: 95px;
+            left: 30%;
+            top: 25%;
+            animation-delay: 11s;
+        }
+
         @keyframes globalFloat {
             0%, 100% {
-                transform: translateY(0px) translateX(0px) rotate(0deg);
+                transform: translateY(0px) translateX(0px) rotate(0deg) scale(1);
             }
             25% {
-                transform: translateY(-20px) translateX(15px) rotate(90deg);
+                transform: translateY(-40px) translateX(30px) rotate(90deg) scale(1.1);
             }
             50% {
-                transform: translateY(-30px) translateX(-10px) rotate(180deg);
+                transform: translateY(-60px) translateX(-20px) rotate(180deg) scale(0.9);
             }
             75% {
-                transform: translateY(-15px) translateX(20px) rotate(270deg);
+                transform: translateY(-30px) translateX(40px) rotate(270deg) scale(1.05);
             }
         }
 
@@ -312,6 +346,7 @@
             margin-bottom: 4rem;
             font-weight: 700;
             position: relative;
+            text-decoration: underline;
         }
 
         .portfolio-title::after {
@@ -699,8 +734,8 @@
              .timeline-item {
                  min-width: auto;
              }
-        }
-    </style>
+       }
+   </style>
 </head>
 <body>
     <div class="global-bubble-bg">
@@ -712,12 +747,16 @@
         <div class="global-bubble"></div>
         <div class="global-bubble"></div>
         <div class="global-bubble"></div>
+        <div class="global-bubble"></div>
+        <div class="global-bubble"></div>
+        <div class="global-bubble"></div>
+        <div class="global-bubble"></div>
     </div>
     <div class="business-card">
         <div class="card">
-            {% if site.logo %}
+         {% if site.logo %}
             <img src="{{site.logo | relative_url}}" alt="Profile Picture" class="profile-image" />
-            {% endif %}
+         {% endif %}
             <div class="card-content">
                 <h1>{{ site.title | default: site.github.repository_name }}</h1>
                 <p class="title">Computer Scientist</p>
@@ -750,13 +789,13 @@
                       <h2>Documents</h2>
                       <div class="document-item">
                           <div class="document-title">Resume</div>
-                          <a href="/pdf/resume.pdf" class="download-button" target="_blank">
+                          <a href="/pdf/Hammer_2025.pdf" class="download-button" target="_blank">
                               📄 Download Resume
                           </a>
                       </div>
                       <div class="document-item">
                           <div class="document-title">Cover Letter</div>
-                          <a href="/pdf/cover-letter.pdf" class="download-button" target="_blank">
+                          <a href="/pdf/Hammer_Cover_Letter.pdf" class="download-button" target="_blank">
                               📄 Download Cover Letter
                           </a>
                       </div>
@@ -847,9 +886,9 @@
                              </div>
                          </div>
                      </div>
-                 </section>
+      </section>
              </div>
         </div>
-    </div>
+   </div>
 </body>
 </html>
