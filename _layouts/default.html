@@ -452,8 +452,8 @@
         /* Bottom Sections */
         .bottom-sections {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
+            grid-template-columns: 1fr;
+            gap: 4rem;
         }
 
         .publication-section,
@@ -471,7 +471,7 @@
 
         .publications-grid {
             display: grid;
-            grid-template-columns: 1fr;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
             gap: 1.5rem;
         }
 
@@ -525,7 +525,7 @@
 
         .projects-grid {
             display: grid;
-            grid-template-columns: 1fr;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 1.5rem;
         }
 
@@ -658,6 +658,11 @@
             .bottom-sections {
                 grid-template-columns: 1fr;
                 gap: 2rem;
+            }
+
+            .publications-grid,
+            .projects-grid {
+                grid-template-columns: 1fr;
             }
 
                          .timeline-container {
