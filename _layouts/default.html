@@ -454,12 +454,14 @@
             display: grid;
             grid-template-columns: 1fr;
             gap: 4rem;
+            width: 100%;
         }
 
         .publication-section,
         .projects-section {
             margin-bottom: 0;
             width: 100%;
+            max-width: 100%;
         }
 
         .publication-section h2,
@@ -475,6 +477,7 @@
             grid-template-columns: repeat(2, 1fr);
             gap: 2rem;
             width: 100%;
+            box-sizing: border-box;
         }
 
         .publication-card {
@@ -530,6 +533,7 @@
             grid-template-columns: repeat(2, 1fr);
             gap: 2rem;
             width: 100%;
+            box-sizing: border-box;
         }
 
         .project-card {
