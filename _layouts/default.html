@@ -451,13 +451,10 @@
         }
 
         /* Bottom Sections */
-        .bottom-sections {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
+        .publication-section {
+            margin-bottom: 4rem;
         }
 
-        .publication-section,
         .projects-section {
             margin-bottom: 0;
         }
@@ -472,7 +469,7 @@
 
         .publications-grid {
             display: grid;
-            grid-template-columns: 1fr;
+            grid-template-columns: 1fr 1fr;
             gap: 1.5rem;
         }
 
@@ -526,7 +523,7 @@
 
         .projects-grid {
             display: grid;
-            grid-template-columns: 1fr;
+            grid-template-columns: 1fr 1fr;
             gap: 1.5rem;
         }
 
@@ -652,11 +649,6 @@
             }
 
             .main-content-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .bottom-sections {
                 grid-template-columns: 1fr;
                 gap: 2rem;
             }
@@ -828,102 +820,101 @@
                      </div>
              </div>
 
-             <!-- Bottom Sections: Publications and Projects -->
-             <div class="bottom-sections">
-                <section class="publication-section">
-                    <h2>Research & Publications</h2>
-                    <div class="publications-grid">
-                        <div class="publication-card">
-                            <div class="publication-badge" style="font-size: 0.8rem; padding: 0.4rem 0.8rem;">🔬 Independent Research</div>
-                            <h3>Summer STEM Research 2024</h3>
-                            <p class="publication-authors">University College Dublin - Professor Brett Becker</p>
-                            <p class="publication-abstract">Independent research project conducted at University College Dublin during the summer of 2024 under the guidance of Professor Brett Becker. This research explored the boundaries of ChatGPT in scientific inquiry, investigating whether the AI could make scientific discoveries autonomously. The project delved into various aspects including anthropomorphism, error messaging, and Conway's Game of Life, with the primary goal of determining if ChatGPT could independently generate scientific insights and discoveries through strategic prompting techniques.</p>
-                            <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;">
-                                <a href="/pdf/Hammer_Poster.pdf" class="publication-link" target="_blank">View Research Poster →</a>
-                                <a href="/pdf/Exploring_the_Boundaries_of_ChatGPT_in_Scientific_Inquiry_Through_Prompting%20(3)%20(1)%20(1).pdf" class="publication-link" target="_blank">View Final Project Report →</a>
-                            </div>
-                        </div>
-                        <div class="publication-card">
-                            <div class="publication-badge">📚 Published Paper</div>
-                            <h3>It's Dangerous to Prompt Alone! Exploring How Fine-Tuning GPT-4o Affects Novices' Programming Error Resolution</h3>
-                            <p class="publication-authors">Published by IEEE</p>
-                            <p class="publication-abstract">This collaborative research paper, co-authored with another student and a graduate student, investigates whether ChatGPT could create better error messages for Python code. The study compared different approaches including one-shot prompting, few-shot prompting, and fine-tuning techniques to evaluate their effectiveness in generating improved error messages that would be more helpful for programmers debugging their code. Published in IEEE.</p>
-                            <a href="https://ieeexplore.ieee.org/abstract/document/11176024" class="publication-link" target="_blank" style="margin-top: 1rem; display: inline-block;">Read Full Paper →</a>
-                        </div>
-                    </div>
-                </section>
-
-                 <section class="projects-section">
-                     <h2>Academic Projects</h2>
-                     <div class="projects-grid">
-                         <div class="project-card">
-                             <h3>Senior Design Project</h3>
-                             <p class="project-description">Worked with Katabasis, a local nonprofit organization, as part of a student team to develop a gamified solution for young children with emotional and behavioral disorders. As team leader, I collaborated with the business to create a visual novel game featuring branching narrative paths based on common school scenarios. The interactive experience helps students understand the consequences of their decisions through different story outcomes.</p>
-                             <div class="project-tags">
-                                 <span class="tag">RenPy</span>
-                                 <span class="tag">Storyboarding</span>
-                                 <span class="tag">Management</span>
-                                 <span class="tag">Technical Documentation</span>
-                                 <span class="tag">Meetings</span>
-                                 <span class="tag">Team Leadership</span>
-                             </div>
-                             <div class="project-links">
-                                 <a href="/pdf/Poster.png" class="project-link" target="_blank">View Project Poster →</a>
-                                 <a href="/pdf/FINAL PROJECT REPORT.docx.pdf" class="project-link" target="_blank">View Final Project Report →</a>
-                             </div>
-                         </div>
-                         <div class="project-card">
-                             <h3>Autonomous Vehicle Project</h3>
-                             <p class="project-description">Developed an autonomous vehicle system capable of recognizing obstacles and steering clear of them. The project involved programming a self-driving car using ROS2, integrating LIDAR sensors for obstacle detection, OpenCV for computer vision processing, and a Teensy microcontroller for vehicle control. The system was designed to autonomously detect lanes and complete laps around a track without interruption, combining sensor fusion and real-time decision-making to navigate safely.</p>
-                             <div class="project-tags">
-                                 <span class="tag">ROS2</span>
-                                 <span class="tag">LIDAR</span>
-                                 <span class="tag">OpenCV</span>
-                                 <span class="tag">Teensy</span>
-                                 <span class="tag">Autonomous Systems</span>
-                                 <span class="tag">Object Detection</span>
-                                 <span class="tag">Lane Detection</span>
-                             </div>
-                             <div class="project-links">
-                                 <a href="/pdf/IMG_0119.mov" class="project-link" target="_blank">View Autonomous Lap Video →</a>
-                                 <a href="/pdf/IMG_0406.mov" class="project-link" target="_blank">View Object Detection Demo →</a>
-                             </div>
-                         </div>
-                         <div class="project-card">
-                             <h3>Coffee Maker Application</h3>
-                             <p class="project-description">Created a full-stack coffee shop application using layered architecture that enables users to login, manage recipes, stock inventory, and purchase coffee through a web portal. Engineered the backend using Spring Boot and Spring Framework with Maven for dependency resolution, managing the database through MySQL and Hibernate ORM. Developed the frontend using React, JavaScript, HTML, and CSS to create an intuitive user interface for the coffee shop management system.</p>
-                             <div class="project-tags">
-                                 <span class="tag">Spring Boot</span>
-                                 <span class="tag">Spring Framework</span>
-                                 <span class="tag">Maven</span>
-                                 <span class="tag">MySQL</span>
-                                 <span class="tag">Hibernate ORM</span>
-                                 <span class="tag">React</span>
-                                 <span class="tag">JavaScript</span>
-                                 <span class="tag">HTML</span>
-                                 <span class="tag">CSS</span>
-                                 <span class="tag">Full Stack</span>
-                                 <span class="tag">Layered Architecture</span>
-                             </div>
-                         </div>
-                         <div class="project-card">
-                             <h3>Engineering Design Day Project</h3>
-                             <p class="project-description">Worked with a team to engineer a collapsible bridge solution meeting strict design criteria: a 5-foot bridge capable of holding 50+ pounds that collapses to a 1ft by 1ft size and can be assembled in under a minute. Designed and 3D printed footers to secure the bridge to the table, then created an arched design using custom-cut and sanded wood blocks held together by screws, washers, and nuts. The successful design placed third overall in the competition.</p>
-                             <div class="project-tags">
-                                 <span class="tag">3D Printing</span>
-                                 <span class="tag">Woodworking</span>
-                                 <span class="tag">Engineering Design</span>
-                                 <span class="tag">Structural Engineering</span>
-                                 <span class="tag">Team Collaboration</span>
-                                 <span class="tag">Prototyping</span>
-                             </div>
-                             <div class="project-links">
-                                 <a href="/pdf/IMG_1664.jpg" class="project-link" target="_blank">View Bridge Photo →</a>
-                             </div>
+             <!-- Research & Publications Section -->
+             <section class="publication-section">
+                 <h2>Research & Publications</h2>
+                 <div class="publications-grid">
+                     <div class="publication-card">
+                         <div class="publication-badge" style="font-size: 0.8rem; padding: 0.4rem 0.8rem;">🔬 Independent Research</div>
+                         <h3>Summer STEM Research 2024</h3>
+                         <p class="publication-authors">University College Dublin - Professor Brett Becker</p>
+                         <p class="publication-abstract">Independent research project conducted at University College Dublin during the summer of 2024 under the guidance of Professor Brett Becker. This research explored the boundaries of ChatGPT in scientific inquiry, investigating whether the AI could make scientific discoveries autonomously. The project delved into various aspects including anthropomorphism, error messaging, and Conway's Game of Life, with the primary goal of determining if ChatGPT could independently generate scientific insights and discoveries through strategic prompting techniques.</p>
+                         <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;">
+                             <a href="/pdf/Hammer_Poster.pdf" class="publication-link" target="_blank">View Research Poster →</a>
+                             <a href="/pdf/Exploring_the_Boundaries_of_ChatGPT_in_Scientific_Inquiry_Through_Prompting%20(3)%20(1)%20(1).pdf" class="publication-link" target="_blank">View Final Project Report →</a>
                          </div>
                      </div>
-      </section>
-             </div>
+                     <div class="publication-card">
+                         <div class="publication-badge">📚 Published Paper</div>
+                         <h3>It's Dangerous to Prompt Alone! Exploring How Fine-Tuning GPT-4o Affects Novices' Programming Error Resolution</h3>
+                         <p class="publication-authors">Published by IEEE</p>
+                         <p class="publication-abstract">This collaborative research paper, co-authored with another student and a graduate student, investigates whether ChatGPT could create better error messages for Python code. The study compared different approaches including one-shot prompting, few-shot prompting, and fine-tuning techniques to evaluate their effectiveness in generating improved error messages that would be more helpful for programmers debugging their code. Published in IEEE.</p>
+                         <a href="https://ieeexplore.ieee.org/abstract/document/11176024" class="publication-link" target="_blank" style="margin-top: 1rem; display: inline-block;">Read Full Paper →</a>
+                     </div>
+                 </div>
+             </section>
+
+             <!-- Academic Projects Section -->
+             <section class="projects-section">
+                 <h2>Academic Projects</h2>
+                 <div class="projects-grid">
+                     <div class="project-card">
+                         <h3>Senior Design Project</h3>
+                         <p class="project-description">Worked with Katabasis, a local nonprofit organization, as part of a student team to develop a gamified solution for young children with emotional and behavioral disorders. As team leader, I collaborated with the business to create a visual novel game featuring branching narrative paths based on common school scenarios. The interactive experience helps students understand the consequences of their decisions through different story outcomes.</p>
+                         <div class="project-tags">
+                             <span class="tag">RenPy</span>
+                             <span class="tag">Storyboarding</span>
+                             <span class="tag">Management</span>
+                             <span class="tag">Technical Documentation</span>
+                             <span class="tag">Meetings</span>
+                             <span class="tag">Team Leadership</span>
+                         </div>
+                         <div class="project-links">
+                             <a href="/pdf/Poster.png" class="project-link" target="_blank">View Project Poster →</a>
+                             <a href="/pdf/FINAL PROJECT REPORT.docx.pdf" class="project-link" target="_blank">View Final Project Report →</a>
+                         </div>
+                     </div>
+                     <div class="project-card">
+                         <h3>Autonomous Vehicle Project</h3>
+                         <p class="project-description">Developed an autonomous vehicle system capable of recognizing obstacles and steering clear of them. The project involved programming a self-driving car using ROS2, integrating LIDAR sensors for obstacle detection, OpenCV for computer vision processing, and a Teensy microcontroller for vehicle control. The system was designed to autonomously detect lanes and complete laps around a track without interruption, combining sensor fusion and real-time decision-making to navigate safely.</p>
+                         <div class="project-tags">
+                             <span class="tag">ROS2</span>
+                             <span class="tag">LIDAR</span>
+                             <span class="tag">OpenCV</span>
+                             <span class="tag">Teensy</span>
+                             <span class="tag">Autonomous Systems</span>
+                             <span class="tag">Object Detection</span>
+                             <span class="tag">Lane Detection</span>
+                         </div>
+                         <div class="project-links">
+                             <a href="/pdf/IMG_0119.mov" class="project-link" target="_blank">View Autonomous Lap Video →</a>
+                             <a href="/pdf/IMG_0406.mov" class="project-link" target="_blank">View Object Detection Demo →</a>
+                         </div>
+                     </div>
+                     <div class="project-card">
+                         <h3>Coffee Maker Application</h3>
+                         <p class="project-description">Created a full-stack coffee shop application using layered architecture that enables users to login, manage recipes, stock inventory, and purchase coffee through a web portal. Engineered the backend using Spring Boot and Spring Framework with Maven for dependency resolution, managing the database through MySQL and Hibernate ORM. Developed the frontend using React, JavaScript, HTML, and CSS to create an intuitive user interface for the coffee shop management system.</p>
+                         <div class="project-tags">
+                             <span class="tag">Spring Boot</span>
+                             <span class="tag">Spring Framework</span>
+                             <span class="tag">Maven</span>
+                             <span class="tag">MySQL</span>
+                             <span class="tag">Hibernate ORM</span>
+                             <span class="tag">React</span>
+                             <span class="tag">JavaScript</span>
+                             <span class="tag">HTML</span>
+                             <span class="tag">CSS</span>
+                             <span class="tag">Full Stack</span>
+                             <span class="tag">Layered Architecture</span>
+                         </div>
+                     </div>
+                     <div class="project-card">
+                         <h3>Engineering Design Day Project</h3>
+                         <p class="project-description">Worked with a team to engineer a collapsible bridge solution meeting strict design criteria: a 5-foot bridge capable of holding 50+ pounds that collapses to a 1ft by 1ft size and can be assembled in under a minute. Designed and 3D printed footers to secure the bridge to the table, then created an arched design using custom-cut and sanded wood blocks held together by screws, washers, and nuts. The successful design placed third overall in the competition.</p>
+                         <div class="project-tags">
+                             <span class="tag">3D Printing</span>
+                             <span class="tag">Woodworking</span>
+                             <span class="tag">Engineering Design</span>
+                             <span class="tag">Structural Engineering</span>
+                             <span class="tag">Team Collaboration</span>
+                             <span class="tag">Prototyping</span>
+                         </div>
+                         <div class="project-links">
+                             <a href="/pdf/IMG_1664.jpg" class="project-link" target="_blank">View Bridge Photo →</a>
+                         </div>
+                     </div>
+                 </div>
+             </section>
         </div>
    </div>
 </body>
