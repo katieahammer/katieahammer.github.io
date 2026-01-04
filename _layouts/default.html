@@ -456,6 +456,8 @@
             width: 100%;
             max-width: 100%;
             clear: both;
+            display: block !important;
+            float: none !important;
         }
 
         .projects-section {
@@ -463,6 +465,8 @@
             width: 100%;
             max-width: 100%;
             clear: both;
+            display: block !important;
+            float: none !important;
         }
 
         .publication-section h2,
@@ -478,6 +482,7 @@
             grid-template-columns: 1fr 1fr;
             gap: 1.5rem;
             width: 100%;
+            grid-auto-flow: row;
         }
 
         .publication-card {
@@ -486,6 +491,8 @@
             border-radius: 15px;
             box-shadow: 0 4px 15px rgba(236, 72, 153, 0.1);
             position: relative;
+            min-width: 0;
+            overflow: hidden;
         }
 
         .publication-badge {
@@ -533,6 +540,7 @@
             grid-template-columns: 1fr 1fr;
             gap: 1.5rem;
             width: 100%;
+            grid-auto-flow: row;
         }
 
         .project-card {
@@ -540,6 +548,8 @@
             padding: 1.5rem;
             border-radius: 15px;
             box-shadow: 0 4px 15px rgba(236, 72, 153, 0.1);
+            min-width: 0;
+            overflow: hidden;
         }
 
         .project-card h3 {
