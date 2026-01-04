@@ -452,7 +452,7 @@
 
         /* Bottom Sections */
         .publication-section {
-            margin-bottom: 0.5rem;
+            margin-bottom: 0;
             width: 100%;
             max-width: 100%;
             clear: both;
@@ -473,11 +473,18 @@
             grid-column: 1 / -1 !important;
         }
 
-        .publication-section h2,
+        .publication-section h2 {
+            font-size: 1.8rem;
+            color: var(--primary-pink);
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+
         .projects-section h2 {
             font-size: 1.8rem;
             color: var(--primary-pink);
             margin-bottom: 2rem;
+            margin-top: 1rem;
             text-align: left;
         }
 
